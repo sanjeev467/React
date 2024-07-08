@@ -14,6 +14,7 @@ import Clicker from "./Clicker";
 import Form from "./Form";
 import Counter from "./Counter";
 import Toggler from "./Toggler";
+import ColorBoxGrid from "./ColorBoxGrid";
 
 // ----------------for shoppongList----------------
 // we have to give an unique identity to the each element in the
@@ -39,6 +40,27 @@ import Toggler from "./Toggler";
 // ];
 
 // ------------------for propertis----------------
+
+//----------------ColorBox----------------
+const colors = [
+  "#E53935",
+  "#E91E63",
+  "#9C27B0",
+  "#673AB7",
+  "#3F51B5",
+  "#2196F3",
+  "#03A9F4",
+  "#00BCD4",
+  "#009688",
+  "#4CAF50",
+  "#8BC34A",
+  "#CDDC39",
+  "#FFEB3B",
+  "#FFC107",
+  "#FF9800",
+  "#FF5722",
+];
+//----------------ColorBox----------------
 function App() {
   const [count, setCount] = useState(0);
 
@@ -138,9 +160,16 @@ function App() {
 
     // -------------Toggler--------------------
 
-    <Toggler />
+    // <Toggler />
 
     // -------------Toggler--------------------
+
+    //---------------ColorBox------------------
+
+    <div>
+      <ColorBoxGrid colors={colors} />
+    </div>
+    //---------------ColorBox------------------
   );
 }
 
