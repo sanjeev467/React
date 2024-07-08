@@ -12,6 +12,8 @@ import ShoppingList from "./ShoppingList";
 import PropertyList from "./PropertyList";
 import Clicker from "./Clicker";
 import Form from "./Form";
+import Counter from "./Counter";
+import Toggler from "./Toggler";
 
 // ----------------for shoppongList----------------
 // we have to give an unique identity to the each element in the
@@ -120,10 +122,25 @@ function App() {
 
     //---------------Form----------------
 
-    <div>
-      <Form />
-    </div>
+    // <div>
+    //   <Form />
+    // </div>
     //---------------Form----------------
+
+    // --------------------Counter-------------------------
+
+    //---------------------- using state---------------
+    // <div>
+    //   <Counter />
+    // </div>
+
+    // --------------------Counter-------------------------
+
+    // -------------Toggler--------------------
+
+    <Toggler />
+
+    // -------------Toggler--------------------
   );
 }
 
