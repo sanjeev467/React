@@ -2,3 +2,9 @@
   display: flex;
   column-gap: 16px;
 }
+
+.Property {
+  border: 2px solid yellow;
+  border-radius: 10px;
+  padding: 4px 4px;
+}

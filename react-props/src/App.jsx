@@ -10,6 +10,8 @@ import Heading from "./Heading";
 import ColorList from "./ColorList";
 import ShoppingList from "./ShoppingList";
 import PropertyList from "./PropertyList";
+import Clicker from "./Clicker";
+import Form from "./Form";
 
 // ----------------for shoppongList----------------
 // we have to give an unique identity to the each element in the
@@ -25,14 +27,14 @@ import PropertyList from "./PropertyList";
 
 // ------------------for propertis----------------
 
-const properties = [
-  { id: 129031, name: "Manali", rating: 4.9, price: 150 },
-  { id: 129032, name: "Marine Drive", rating: 4.99, price: 250 },
-  { id: 129033, name: "Lone Mountain", rating: 4.8, price: 300 },
-  { id: 129034, name: "Goa", rating: 4.7, price: 120 },
-  { id: 129035, name: "Malaysia", rating: 4.6, price: 140 },
-  { id: 129036, name: "Thailand", rating: 4.9, price: 96 },
-];
+// const properties = [
+//   { id: 129031, name: "Manali", rating: 4.9, price: 150 },
+//   { id: 129032, name: "Marine Drive", rating: 4.99, price: 250 },
+//   { id: 129033, name: "Lone Mountain", rating: 4.8, price: 300 },
+//   { id: 129034, name: "Goa", rating: 4.7, price: 120 },
+//   { id: 129035, name: "Malaysia", rating: 4.6, price: 140 },
+//   { id: 129036, name: "Thailand", rating: 4.9, price: 96 },
+// ];
 
 // ------------------for propertis----------------
 function App() {
@@ -102,11 +104,26 @@ function App() {
 
     // ------------------for propertis----------------
 
-    <div>
-      <PropertyList properties={properties} />
-    </div>
+    // <div>
+    //   <PropertyList properties={properties} />
+    // </div>
 
     // ------------------for propertis----------------
+
+    //------------------Clicker-------------------------
+    // ----------------React Events-----------------
+
+    // <div>
+    //   <Clicker />
+    // </div>
+    //------------------Clicker-------------------------
+
+    //---------------Form----------------
+
+    <div>
+      <Form />
+    </div>
+    //---------------Form----------------
   );
 }
 
