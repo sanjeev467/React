@@ -10,5 +10,3 @@ function Dice({ dice, color }) {
   );
 }
 export default Dice;
-
-[3, 4, 2];
