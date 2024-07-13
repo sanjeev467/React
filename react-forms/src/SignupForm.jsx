@@ -1,36 +1,38 @@
 import { useState } from "react";
-
-export default function SignupForm() {
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastName] = useState("");
-  const updateFirstName = (e) => {
-    setFirstName(e.target.value);
+function SignupForm() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const updateFirstName = (evt) => {
+    setFirstName(evt.target.value);
   };
-  const updateLastName = (e) => {
-    setLastName(e.target.value);
+  const updateLastName = (evt) => {
+    setLastName(evt.target.value);
+  };
+
+  const handleSubmit = () => {
+    console.log(firstName, lastName);
   };
   return (
     <div>
-      {/* to use label for our input we use htmlfor property and match this with the id of the input element
-    here id of onput is username so htmlfor will be = to username */}
       <label htmlFor="firstname">First Name</label>
       <input
         type="text"
-        placeholder="First Name"
-        value={firstname}
+        placeholder="username"
+        value={firstName}
         onChange={updateFirstName}
         id="firstname"
       />
       <label htmlFor="lastname">Last Name</label>
       <input
         type="text"
-        placeholder="Last Name"
-        value={lastname}
+        placeholder="username"
+        value={lastName}
         onChange={updateLastName}
         id="lastname"
       />
-
-      <button>Submit</button>
+      <button onClick={handleSubmit}>Submit</button>
     </div>
   );
 }
+
+export default SignupForm;

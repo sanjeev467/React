@@ -1,42 +1,57 @@
 import { useState } from "react";
-export default function BetterSignupForm() {
-  const [formdata, setFormData] = useState({ firstName: "", lastName: "" });
-  const handleChange = (e) => {
-    const changeField = e.target.name;
-    const newValue = e.target.value;
+function BetterSignupForm() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    password: "",
+  });
+
+  const handleChange = (evt) => {
+    const changedField = evt.target.name;
+    const newValue = evt.target.value;
     setFormData((currData) => {
-      currData[changeField] = newValue;
-      return { ...currData };
+      return {
+        ...currData,
+        [changedField]: newValue,
+      };
     });
   };
 
   const handleSubmit = () => {
-    console.log(formdata);
+    console.log(formData);
   };
   return (
     <div>
-      {/* to use label for our input we use htmlfor property and match this with the id of the input element
-    here id of onput is username so htmlfor will be = to username */}
       <label htmlFor="firstname">First Name</label>
       <input
         type="text"
-        placeholder="First Name"
-        value={formdata.firstName}
+        placeholder="first name"
+        value={formData.firstName}
         onChange={handleChange}
-        name="firstName" // name should match exactly with the propery name in piece of state object
+        name="firstName"
         id="firstname"
       />
       <label htmlFor="lastname">Last Name</label>
       <input
         type="text"
-        placeholder="Last Name"
-        value={formdata.lastName}
+        placeholder="last name"
+        value={formData.lastName}
         onChange={handleChange}
-        name="lastName"
         id="lastname"
+        name="lastName"
       />
-
+      <label htmlFor="password">Password</label>
+      <input
+        type="password"
+        placeholder="password"
+        value={formData.password}
+        onChange={handleChange}
+        id="password"
+        name="password"
+      />
       <button onClick={handleSubmit}>Submit</button>
     </div>
   );
 }
+
+export default BetterSignupForm;

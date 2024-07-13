@@ -1,25 +1,16 @@
-import "./App.css";
-import SignupForm from "./SignupForm";
-import UsernameForm from "./UsernameForm";
 import BetterSignupForm from "./BetterSignupForm";
+import ShoppingListForm from "./ShoppingListForm";
+import ShoppingList from "./ShoppingList";
+import FormDemo from "./FormDemo";
+import "./App.css";
 
 function App() {
   return (
-    //-----------UserNameForm------------------
-    // <>
-    //   <UsernameForm />
-    // </>
-
-    //-----------UserNameForm------------------
-
-    //---------SignupForm---------------------
-
-    // <SignupForm />
-    //---------SignupForm---------------------
-
-    //---------BetterSignupForm---------------------
-    <BetterSignupForm />
-    //---------BetterSignupForm---------------------
+    <>
+      <ShoppingList />
+      <h1>Validated Form</h1>
+      <FormDemo />
+    </>
   );
 }
 
