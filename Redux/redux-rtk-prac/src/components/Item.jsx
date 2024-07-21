@@ -7,7 +7,7 @@ import { addItem } from "../slices/cartSlice";
 const Item = (props) => {
   const dispatch = useDispatch();
   const handleAddToCart = () => {
-    dispatch(addItem(props.id, props.name, props.price));
+    dispatch(addItem({ name: props.name, price: props.price }));
   };
   return (
     <div className="item-card">
