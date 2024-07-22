@@ -8,6 +8,8 @@ function App() {
     { id: 2, name: "peach", price: 40 },
     { id: 3, name: "orange", price: 70 },
     { id: 4, name: "apple", price: 110 },
+    { id: 4, name: "Guava", price: 60 },
+    { id: 4, name: "Pneapple", price: 110 },
   ];
   return (
     <div className="container">
